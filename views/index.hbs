@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <title>Github Explorer</title>
+   
+  </head>
+  <body class="d-flex flex-column h-100">    
+    <main role="main" class="flex-shrink-0">
+        <div class="container">
+            <h1 class="mt-5">Github Explorer <small>Search for a repo by language or topic</small></h1>
+            <hr>
+            
+            <form>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" name="repository" placeholder="Enter a repo name" autocomplete="off">
+                    <small class="form-text text-muted">* required</small>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" name="language" placeholder="Enter a language(s)" autocomplete="off">
+                    <small class="form-text text-muted">* optional, you can search for several language i.e. php,python,ruby</small>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" name="topic" placeholder="Enter your topic" autocomplete="off">
+                    <small class="form-text text-muted">* optional, search for several topics by entering the name with comma seperated</small>
+                  </div>
+                  <div class="col">
+                      <button class="btn btn-primary btn-block">Search</button>
+                  </div>
+                </div>
+            </form>
+        </div>
+    </main>
+      
+    <footer class="footer mt-auto py-3">
+        <div class="container pb-5">
+            <hr>
+            <span class="text-muted">
+                    Copyright &copy; 2019 | <a href="https://pisyek.com">Pisyek.com</a>
+            </span>
+        </div>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
