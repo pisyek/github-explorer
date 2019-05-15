@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "template": "handlebars views-handlebars/githubTable.handlebars > public/js/template.js"
   },
   "keywords": [],
   "author": "",
