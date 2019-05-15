@@ -1,0 +1,28 @@
+<h2 class="mt-5 mb-4">Search result</h2>
+<table id="githubTable" class="table">
+<thead class="thead-light">
+    <tr>
+    <th scope="col">#</th>
+    <th scope="col">Repository</th>
+    <th scope="col" class="w-3">Language</th>
+    <th scope="col" class="w-3">Star</th>
+    </tr>
+</thead>
+<tbody>
+    {{#each repos}}
+    <tr>
+        <td>{{incremented @index}}</td>
+        <td>
+            <h5><a href="{{svn_url}}" target="_blank">{{full_name}}</a></h5>
+            {{#if description}}
+            <p>{{description}}</p>
+            {{else}}
+            <p>No description provided.</p>
+            {{/if}}
+        </td>
+        <td>{{language}}</td>
+        <td>{{stargazers_count}}</td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>

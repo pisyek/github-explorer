@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
@@ -31,13 +32,20 @@
                     <small class="form-text text-muted">* required</small>
                   </div>
                   <div class="col">
-                    <input type="text" 
-                           class="form-control" 
-                           id="language" 
-                           name="language" 
-                           placeholder="Enter a language(s)" 
-                           autocomplete="off">
-                    <small class="form-text text-muted">* optional, you can search for several language i.e. php,python,ruby</small>
+                    <select class="form-control" id="language">
+                      <option value="">Select a language.</option>
+                      <option value="PHP">PHP</option>
+                      <option value="JavaScript">JavaScript</option>
+                      <option value="HTML">HTML</option>
+                      <option value="CSS">CSS</option>
+                      <option value="Shell">Shell</option>
+                      <option value="Vue">Vue</option>
+                      <option value="Dockerfile">Dockerfile</option>
+                      <option value="TypeScript">TypeScript</option>
+                      <option value="Java">Java</option>
+                      <option value="Python">Python</option>
+                    </select>
+                    <small class="form-text text-muted">* optional</small>
                   </div>
                   <div class="col">
                     <input type="text" 
@@ -46,7 +54,7 @@
                            name="topic" 
                            placeholder="Enter your topic" 
                            autocomplete="off">
-                    <small class="form-text text-muted">* optional, search for several topics by entering the name with comma seperated</small>
+                    <small class="form-text text-muted">* optional</small>
                   </div>
                   <div class="col">
                       <button id="searchBtn" class="btn btn-primary btn-block">Search</button>
@@ -55,47 +63,12 @@
             </form>
             <hr>
 
-            <div id="result"></div>
+            <div id="result">
+              Your search result will appear here.
             </div>
+            
         </div>
     </main>
-
-    <script id="github-list" type="text/html">
-      <h2 class="mt-5 mb-4">{{ title }} repository results</h2>
-              <table class="table">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Repository</th>
-                    <th scope="col">Language</th>
-                    <th scope="col">Star</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>
-                      <h5><a href="">Laravel/laravel</a></h5>
-                      <p>A curated list of bookmarks, packages, tutorials, videos and other cool resources from the Laravel ecosystem</p>
-                    </td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-    </script>
 
     <footer class="footer mt-auto py-3">
         <div class="container pb-5">
@@ -110,7 +83,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.runtime.min.js"></script>
+    <script src="js/template.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
