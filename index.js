@@ -15,6 +15,10 @@ app.use(express.static(publicDir));
 
 app.get('/', (req, res) => res.render('index'));
 
+app.get('/login', (req, res) => {
+    res.render('login');
+});
+
 app.get('/search-github', async (req, res) => {
     const repository = req.query.repository;
     const language = req.query.language;
