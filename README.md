@@ -91,6 +91,10 @@ Run unit tests to check if you have setup correctly.
 npm run test
 ```
 
+Screenshot
+
+![screenshot](https://raw.githubusercontent.com/pisyek/github-explorer/master/public/img/screenshot-test.PNG)
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
