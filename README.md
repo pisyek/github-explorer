@@ -7,13 +7,15 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
+* [Todo List](#todo)
 * [Contact](#contact)
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
+![screenshot](https://raw.githubusercontent.com/pisyek/github-explorer/master/public/img/screenshot.PNG)
 
 This is a simple nodejs web application. It allows users to search for github repository by language and/or topic.
 
@@ -83,15 +85,19 @@ npm run dev
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Access `http://localhost:{port}` to view the homepage of this project.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+To login to admin dashboard, go to `http://localhost:{port}/login`. 
+
+_Please note that at the moment there is no admin dashboard yet._
 
 
-<!-- LICENSE -->
-## License
+<!-- TODO -->
+## Todo
 
-Distributed under the MIT License. See `LICENSE` for more information.
+1. Add seeder to store admin user info in database.
+2. Create auth function to enable user login.
+3. Create dashboard page for admin to see reports.
 
 
 
