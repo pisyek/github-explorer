@@ -6,6 +6,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
+  * [Testing](#testing)
 * [Usage](#usage)
 * [Todo List](#todo)
 * [Contact](#contact)
@@ -80,6 +81,14 @@ cp env-sample .env
 6. Start the app
 ```npm
 npm run dev
+```
+
+<!-- TESTING -->
+### Testing
+
+Run unit tests to check if you have setup correctly.
+```npm
+npm run test
 ```
 
 <!-- USAGE EXAMPLES -->
