@@ -10,7 +10,7 @@ function getToken() {
     return token;
 }
 
-const searchRepository = async (keyword, language, topic) => {
+const searchRepository = async (keyword, language, topic, per_page = 100) => {
     let q = keyword + " in:name,description";
 
     if (!!language) {
@@ -24,7 +24,7 @@ const searchRepository = async (keyword, language, topic) => {
     const response = await octokit.search.repos({
         q,
         sort: 'stars',
-        per_page: 100
+        per_page
     });
 
     return response;
