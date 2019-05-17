@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "seed": "node src/user/userSeeder.js",
     "test": "mocha || exit 0",
     "dev": "nodemon index.js",
     "template": "handlebars views-handlebars/githubTable.handlebars > public/js/template.js"
