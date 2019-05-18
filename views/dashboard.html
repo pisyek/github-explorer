@@ -7,7 +7,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
@@ -15,60 +14,40 @@
    
   </head>
   <body class="d-flex flex-column h-100">
-      {{>menu}}
-
+    {{>menu}}
+    
     <main role="main" class="flex-shrink-0">
         <div class="container">
-            <h1 class="mt-5">Search <small>for a repo by language or topic</small></h1>
+            <h1 class="mt-5">Github Explorer - Dashboard <small>Search for a repo by language or topic</small></h1>
             <hr>
             
-            <form id="searchForm">
+            <form id="loginForm">
                 <div class="form-row">
                   <div class="col">
                     <input type="text" 
                            class="form-control" 
-                           id="repository" 
-                           name="repository" 
-                           placeholder="Enter a repo name" 
+                           id="email" 
+                           name="email" 
+                           placeholder="Enter your email" 
                            autocomplete="off" required>
                     <small class="form-text text-muted">* required</small>
                   </div>
                   <div class="col">
-                    <select class="form-control" id="language">
-                      <option value="">Select a language.</option>
-                      <option value="PHP">PHP</option>
-                      <option value="JavaScript">JavaScript</option>
-                      <option value="HTML">HTML</option>
-                      <option value="CSS">CSS</option>
-                      <option value="Shell">Shell</option>
-                      <option value="Vue">Vue</option>
-                      <option value="Dockerfile">Dockerfile</option>
-                      <option value="TypeScript">TypeScript</option>
-                      <option value="Java">Java</option>
-                      <option value="Python">Python</option>
-                    </select>
-                    <small class="form-text text-muted">* optional</small>
-                  </div>
-                  <div class="col">
-                    <input type="text" 
+                    <input type="password" 
                            class="form-control" 
-                           id="topic" 
-                           name="topic" 
-                           placeholder="Enter your topic" 
-                           autocomplete="off">
-                    <small class="form-text text-muted">* optional</small>
+                           id="password" 
+                           name="password" 
+                           placeholder="Enter your password" 
+                           autocomplete="off" required>
+                    <small class="form-text text-muted">* required</small>
                   </div>
                   <div class="col">
-                      <button id="searchBtn" class="btn btn-primary btn-block">Search</button>
+                      <button id="searchBtn" class="btn btn-primary btn-block">Login</button>
                   </div>
                 </div>
             </form>
             <hr>
 
-            <div id="result">
-              Your search result will appear here.
-            </div>
-            
         </div>
     </main>
 
@@ -85,8 +64,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.runtime.min.js"></script>
     <script src="js/template.js"></script>
     <script src="js/app.js"></script>

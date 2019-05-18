@@ -2,7 +2,7 @@ Handlebars.registerHelper('incremented', function(index) {
     return parseInt(index)+ 1;    
 });
 
-const $searchForm = document.querySelector('form');
+const $searchForm = document.querySelector('#searchForm');
 const $repository = document.querySelector('#repository');
 const $language = document.querySelector('#language');
 const $topic = document.querySelector('#topic');
