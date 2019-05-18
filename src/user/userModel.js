@@ -17,12 +17,7 @@ const userSchema = new mongoose.Schema({
         required: true,
         minlength: 7,
         trim: true
-    },
-    tokens: [{
-        token: {
-            type: String
-        }
-    }]
+    }
 }, {
     timestamps: true
 });
@@ -34,6 +29,26 @@ userSchema.pre('save', async function(next) {
     }
     next();
 });
+
+userSchema.statics.findByCredentials = async (email, password) => {
+    const user = await User.findOne({ email });
+
+    
+    console.log(user);
+    console.log(email);
+    console.log(password);
+    if (!user) {
+        throw new Error('Invalid credentials.');
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+        throw new Error('Invalid credentials.');
+    }
+
+    return user;
+};
 
 const User = new mongoose.model('User', userSchema);
 
