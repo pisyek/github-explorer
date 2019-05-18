@@ -39,7 +39,6 @@ $searchForm.addEventListener('submit', (e) => {
                 ]
             });
             $searchButton.removeAttribute('disabled');
-            console.log(data);
         });
     });
 });
