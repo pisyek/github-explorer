@@ -6,10 +6,6 @@ const octokit = new Octokit({
     auth: token
 });
 
-function getToken() {
-    return token;
-}
-
 const searchRepository = async (keyword, language, topic, per_page = 100) => {
     let q = keyword + " in:name,description";
 
@@ -31,6 +27,5 @@ const searchRepository = async (keyword, language, topic, per_page = 100) => {
 }
 
 module.exports = {
-    getToken,
     searchRepository
 };
