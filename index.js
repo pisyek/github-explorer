@@ -16,6 +16,9 @@ app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
 app.use(express.static(publicDir));
 hbs.registerPartials(partialsDir);
+hbs.registerHelper('incremented', function(value) {
+    return parseInt(value) + 1;
+})
 
 app.use(userRouter);
 app.use(searchRouter);
