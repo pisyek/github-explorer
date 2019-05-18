@@ -19,36 +19,41 @@
     
     <main role="main" class="flex-shrink-0">
         <div class="container">
-            <h1 class="mt-5">Dashboard <small>search statistics</small></h1>
+            <h1 class="mt-5">Search 
+                <small>
+                    keyword: {{result.param.repository}}
+                    {{#if result.param.language}}, language: {{result.param.language}}{{/if}}
+                    {{#if result.param.topic}}, topic: {{result.param.topic}}{{/if}}
+                </small>
+            </h1>
             <hr>
             
             <div id="statisticsDiv">
                 <table id="statisticsTable" class="table">
                   <thead class="thead-light">
                       <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Search</th>
-                      <th scope="col" class="w-3">Search on</th>
-                      <th scope="col" class="w-3">Result</th>
+                        <th scope="col">#</th>
+                        <th scope="col">Repository</th>
+                        <th scope="col" class="w-3">Language</th>
+                        <th scope="col" class="w-3">Star</th>
                       </tr>
                   </thead>
                   <tbody>
-                      {{#each results}}
-                      <tr>
-                          <td>{{incremented @index}}</td>
-                          <td>
-                              <p>Keyword: {{param.repository}}</p>
-                              {{#if param.language}}
-                              <p>Language: {{param.language}}</p>
-                              {{/if}}
-                              {{#if param.topic}}
-                              <p>Topic: {{param.topic}}</p>
-                              {{/if}}
-                          </td>
-                          <td>{{createdAt}}</td>
-                          <td><a href="/dashboard/search/{{_id}}" target="_blank">Details</a></td>
-                      </tr>
-                      {{/each}}
+                        {{#each result.result}}
+                        <tr>
+                            <td>{{incremented @index}}</td>
+                            <td>
+                                <h5><a href="{{svn_url}}" target="_blank">{{full_name}}</a></h5>
+                                {{#if description}}
+                                <p>{{description}}</p>
+                                {{else}}
+                                <p>No description provided.</p>
+                                {{/if}}
+                            </td>
+                            <td>{{language}}</td>
+                            <td>{{stargazers_count}}</td>
+                        </tr>
+                        {{/each}}
                   </tbody>
                   </table>
             </div>
