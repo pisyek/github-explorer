@@ -7,8 +7,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 
     <title>Github Explorer</title>
    
@@ -18,9 +18,20 @@
     
     <main role="main" class="flex-shrink-0">
         <div class="container">
-            <h1 class="mt-5">Github Explorer <small>Search for a repo by language or topic</small></h1>
+            <h1 class="mt-5">Login <small>to view your dashboard</small></h1>
             <hr>
             
+            {{#if error}}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{error}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {{/if}}
+
+            {{message}}
+
             <form id="loginForm" action="/login" method="POST">
                 <div class="form-row">
                   <div class="col">
