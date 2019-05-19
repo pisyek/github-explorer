@@ -8,7 +8,6 @@
   * [Installation](#installation)
   * [Testing](#testing)
 * [Usage](#usage)
-* [Todo List](#todo)
 * [Contact](#contact)
 
 
@@ -41,7 +40,7 @@ To get a local copy up and running please follow these simple steps.
 
 ### Prerequisites
 
-You need to have nodejs (v11 or later) and npm (v6.7 or later)
+You need to have nodejs (v11 or later) and npm (v6.7 or later). For database, please install MongoDB v4.0.
 
 1. Nodejs installation doc: [here](https://nodejs.org/en/)
 
@@ -50,11 +49,14 @@ You need to have nodejs (v11 or later) and npm (v6.7 or later)
 ```sh
 node -v
 ```
+
 3. Check npm version 
 * npm
 ```sh
 npm -v
 ```
+
+4. Download and install mongodb from [https://www.mongodb.com/download-center/community](https://www.mongodb.com/download-center/community).
 
 ### Installation
 
@@ -78,7 +80,12 @@ cp env-sample .env
 
 5. You can get github personal access token from here: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
-6. Start the app
+6. Start you mongodb
+```sh
+mongod
+```
+
+7. Start the app
 ```npm
 npm run dev
 ```
@@ -101,18 +108,6 @@ Screenshot
 Access `http://localhost:{port}` to view the homepage of this project.
 
 To login to admin dashboard, go to `http://localhost:{port}/login`. 
-
-_Please note that at the moment there is no admin dashboard yet._
-
-
-<!-- TODO -->
-## Todo
-
-1. Add seeder to store admin user info in database.
-2. Create auth function to enable user login.
-3. Create dashboard page for admin to see reports.
-
-
 
 <!-- CONTACT -->
 ## Contact
