@@ -43,7 +43,11 @@ app.use(express.urlencoded({extended:true}));
 app.use(userRouter);
 app.use(searchRouter);
 
-app.get('/', (req, res) => res.render('index'));
+app.get('/', (req, res) => {
+    res.render('index', {
+        user: req.user || null
+    })
+});
 
 app.get('*', (req, res) => {
     res.render('404');

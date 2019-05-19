@@ -9,7 +9,8 @@ router.get('/login', (req, res) => {
     }
     
     res.render('login', {
-        error: req.flash('error')
+        error: req.flash('error'),
+        user: req.user
     });
 });
 
@@ -29,7 +30,8 @@ router.get('/logout', (req, res) => {
 router.get('/dashboard', isAuthenticated, async (req, res) => {
     let results = await Search.find({});
     res.render('dashboard', {
-        results
+        results,
+        user: req.user
     });
 });
 
@@ -42,7 +44,8 @@ router.get('/dashboard/search/:id', isAuthenticated, async (req, res) => {
         }
 
         res.render('search-detail', {
-            result
+            result,
+            user: req.user
         });
     } catch (error) {
         return res.status(500).send(error);
