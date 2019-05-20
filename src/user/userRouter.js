@@ -5,7 +5,7 @@ const passport = require('passport');
 
 router.get('/login', (req, res) => {
     if (req.user) {
-        return res.redirect('/dashboard');
+        return res.redirect(`${process.env.APP_URL}/dashboard`);
     }
     
     res.render('login', {
@@ -16,15 +16,15 @@ router.get('/login', (req, res) => {
 
 router.post('/login', async (req, res, next) => {
     passport.authenticate('local', {
-            successRedirect: '/dashboard',
-            failureRedirect: '/login',
+            successRedirect: `${process.env.APP_URL}/dashboard`,
+            failureRedirect: `${process.env.APP_URL}/login`,
             failureFlash: 'Invalid credentials.'
         })(req, res, next);
 });
 
 router.get('/logout', (req, res) => {
     req.logout();
-    res.redirect('/');
+    res.redirect(`${process.env.APP_URL}`);
 });
 
 router.get('/dashboard', isAuthenticated, async (req, res) => {
@@ -57,7 +57,7 @@ function isAuthenticated(req, res, next) {
         return next();
     } else {
         req.flash('error', 'Please login.');
-        res.redirect('/login');
+        res.redirect(`${process.env.APP_URL}/login`);
     }
 }
 
