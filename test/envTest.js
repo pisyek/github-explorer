@@ -5,6 +5,10 @@ require('dotenv').config({path: path.join(__dirname, '../.env')});
 const { assert } = require('chai');
 
 describe('Env', function() {
+    it('APP_URL must be defined.', function() {
+        assert.exists(process.env.APP_URL);
+    });
+
     it('PORT must be defined.', function() {
         assert.exists(process.env.PORT);
     });
