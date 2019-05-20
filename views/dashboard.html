@@ -8,8 +8,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{app_url}}/css/style.css">
+    <link rel="shortcut icon" href="{{app_url}}/img/favicon.ico" type="image/x-icon">
 
     <title>Github Explorer</title>
    
@@ -46,7 +46,7 @@
                               {{/if}}
                           </td>
                           <td>{{createdAt}}</td>
-                          <td><a href="/dashboard/search/{{_id}}" target="_blank">Details</a></td>
+                          <td><a href="{{app_url}}/dashboard/search/{{_id}}" target="_blank">Details</a></td>
                       </tr>
                       {{/each}}
                   </tbody>

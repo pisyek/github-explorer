@@ -14,7 +14,7 @@ $searchForm.addEventListener('submit', (e) => {
     $searchButton.setAttribute('disabled', 'disabled');
     $result.innerHTML = "Searching...";
 
-    let baseUrl = '/search-github?repository=';
+    let baseUrl = APP_URL+'/search-github?repository=';
 
     if (!!$repository.value) {
         baseUrl += $repository.value;
