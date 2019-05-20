@@ -38,6 +38,9 @@ hbs.registerPartials(partialsDir);
 hbs.registerHelper('incremented', function(value) {
     return parseInt(value) + 1;
 });
+hbs.registerHelper('base_url', function(){
+    return process.env.APP_URL;
+});
 
 app.use(express.urlencoded({extended:true}));
 app.use(userRouter);
