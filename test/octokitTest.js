@@ -7,5 +7,5 @@ describe('Octokit', function() {
         let result = await octokit.searchRepository('laravel', null, null, 1);
         let itemCount = result.data.items.length;
         assert.equal(itemCount, 1);
-    }).timeout(5000);
+    }).timeout(15000);
 });
