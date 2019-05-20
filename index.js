@@ -38,7 +38,7 @@ hbs.registerPartials(partialsDir);
 hbs.registerHelper('incremented', function(value) {
     return parseInt(value) + 1;
 });
-hbs.registerHelper('base_url', function(){
+hbs.registerHelper('app_url', function(){
     return process.env.APP_URL;
 });
 
