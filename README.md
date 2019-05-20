@@ -40,7 +40,9 @@ To get a local copy up and running please follow these simple steps.
 
 ### Prerequisites
 
-You need to have nodejs (v11 or later) and npm (v6.7 or later). For database, please install MongoDB v4.0.
+You need to have nodejs (v11 or later) and npm (v6.7 or later).
+
+For database, please install MongoDB v4.0 and add a user for authentication.
 
 1. Nodejs installation doc: [here](https://nodejs.org/en/)
 
@@ -57,6 +59,8 @@ npm -v
 ```
 
 4. Download and install mongodb from [https://www.mongodb.com/download-center/community](https://www.mongodb.com/download-center/community).
+
+5. Enable authentication for mongodb. Please refer to the official documentation [here](https://docs.mongodb.com/manual/tutorial/enable-authentication/).
 
 ### Installation
 
@@ -82,7 +86,7 @@ cp env-sample .env
 
 6. Start you mongodb
 ```sh
-mongod
+mongod --auth
 ```
 
 7. Start the app
